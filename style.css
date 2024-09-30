@@ -1,0 +1,196 @@
+/* Reset CSS */
+body, h1, p, div, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #0c1e3a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.png') no-repeat center center/cover;
+    filter: blur(8px);
+    z-index: -2;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    z-index: 2;
+}
+
+.logo img {
+    width: 80px;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Скругленные углы у логотипа */
+}
+
+.animated-title {
+    font-size: 48px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    animation: shake 1.5s infinite ease-in-out; /* Более плавная анимация */
+}
+
+@keyframes shake {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(1px, -2px); }
+}
+
+.crypto-info {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.countdown-circle {
+    background: rgba(255, 255, 255, 0.4); /* Более яркий цвет */
+    border-radius: 50%;
+    padding: 20px;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px #fff;
+}
+
+.countdown-item {
+    text-align: center;
+}
+
+.countdown-item span:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+}
+
+.notify-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.notify-form button {
+    padding: 10px 20px;
+    border: none;
+    background: linear-gradient(45deg, #ff9900, #ff7700);
+    color: #fff;
+    border-radius: 25px; /* Скругленная кнопка */
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.notify-form button:hover {
+    background: linear-gradient(45deg, #ff7700, #ff9900);
+}
+
+.floating-balls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.telegram-button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #0088cc; /* Синий цвет как у Telegram */
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.telegram-button:hover {
+    background-color: #0077b6;
+}
+
+
+.notify-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notify-form input {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+}
+
+.notify-form button {
+    padding: 10px 20px;
+    border: none;
+    background: linear-gradient(45deg, #ff9900, #ff7700);
+    color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.notify-form button:hover {
+    background: linear-gradient(45deg, #ff7700, #ff9900);
+}
+
+
+
+.ball {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url('ball.png') no-repeat center center / contain; /* Use your soccer ball image */
+    opacity: 0.8;
+    animation: floatBall 15s infinite linear;
+    filter: blur(3px);
+}
+
+@keyframes floatBall {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateX(calc(100vw - 40px)) translateY(calc(100vh - 40px)) rotate(360deg);
+    }
+}
